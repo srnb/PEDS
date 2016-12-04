@@ -18,7 +18,7 @@ int main (int argc, char* argv[])
 	long time, hashid, size,count=0;
 	ofstream outfile;
 	std::map<long,long> mymap;
-	std::map<long,RequestFreq,PointComarator> freqmap;
+	std::map<long,RequestFreq> freqmap;
 	ifstream infile;
 	infile.open("trace1.txt");
 	cout <<"Intial value" <<count;

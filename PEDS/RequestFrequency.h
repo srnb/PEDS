@@ -53,7 +53,8 @@ public:
 	}
 
 };
-struct PointComarator{
+
+/*struct PointComarator{
 bool operator()(const RequestFreq &first,const RequestFreq &second) const{
 		if(first.getFreq()<second.getFreq()){
 			return first.getFreq()<second.getFreq();
@@ -61,7 +62,7 @@ bool operator()(const RequestFreq &first,const RequestFreq &second) const{
 			return second.getFreq()< first.getFreq();
 		}
 	}
-};
+};*/
 /*std::list<Request> RequestFreq::getFreq(long hashid){
    this->reqlist;
 }*/
