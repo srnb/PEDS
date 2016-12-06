@@ -6,6 +6,8 @@
  */
 #include <iostream>
 #include <list>
+#include <utility>
+
 class Request{
 private:
 	long request_id;
@@ -26,11 +28,11 @@ public:
 class RequestFreq{
 private:
 	long hashid;
-    std::list<Request> reqlist;
+    std::list<long> reqlist;
     long freq;
+    long size;
 public:
     //std::list<Request> getFreq(long hashid);
-    long getHashid();
 
 	void setFreq(long freq) {
 		this->freq = freq;
@@ -40,11 +42,11 @@ public:
 		this->hashid = hashid;
 	}
 
-	const std::list<Request>& getReqlist() const {
+	const std::list<long>& getReqlist() const {
 		return reqlist;
 	}
 
-	void setReqlist(const std::list<Request>& reqlist) {
+	void setReqlist(const std::list<long>& reqlist) {
 		this->reqlist = reqlist;
 	}
 
@@ -52,6 +54,17 @@ public:
 		return freq;
 	}
 
+	long getSize() const {
+		return size;
+	}
+
+	void setSize(long size) {
+		this->size = size;
+	}
+
+	long getHashid() const {
+		return hashid;
+	}
 };
 
 /*struct PointComarator{
@@ -66,6 +79,7 @@ bool operator()(const RequestFreq &first,const RequestFreq &second) const{
 /*std::list<Request> RequestFreq::getFreq(long hashid){
    this->reqlist;
 }*/
+
 
 Request::Request(long request_id, long hash_id , long request_size){
   this->request_id=request_id;
