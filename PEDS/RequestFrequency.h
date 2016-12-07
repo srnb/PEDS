@@ -8,6 +8,10 @@
 #include <list>
 #include <utility>
 
+/**
+ * Request class with parameters
+ * Request_Id , HashCode and Request Size.
+ */
 class Request{
 private:
 	long request_id;
@@ -25,6 +29,11 @@ public:
 	Request();
 };
 
+/**
+ * RequestFreq class with
+ * Hash ID, List of time stamps,
+ * freq(No of occurrence) and its Size.
+ */
 class RequestFreq{
 private:
 	long hashid;
@@ -67,6 +76,10 @@ public:
 	}
 };
 
+/**
+ * Comparator Function to sort based on other fields
+ * For future changes
+ */
 /*struct PointComarator{
 bool operator()(const RequestFreq &first,const RequestFreq &second) const{
 		if(first.getFreq()<second.getFreq()){
